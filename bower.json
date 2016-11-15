@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "description": "雷庭个人简历",
+  "main": "index.js",
+  "authors": [
+    "light"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": "^2.8.8",
+    "bootstrap": "^3.3.7",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "jquery-ui": "^1.12.1"
+  }
+}

@@ -1,0 +1,1 @@
+$(function(){!function(n,i){$("#fullpage").fullpage({navigation:!0,navigationPosition:"right"})}(window,document)});
