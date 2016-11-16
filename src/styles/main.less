@@ -1,1 +1,75 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+/* H5对象的全局样式 */
+.h5{
+  height: 100%;
+}
+.h5_page{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+//自定义变量
+.keyframes(@name; @arguments) {
+  @-moz-keyframes @name { @arguments(); }
+  @-webkit-keyframes @name { @arguments(); }
+  @keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+  -moz-animation: @arguments;
+  animation: @arguments;
+}
+
+.h5_page{
+  background-image: url(../images/page_bg.png);
+}
+.h5_page_face{
+  background-image: url(../images/face_bg.png);
+}
+.h5_component_name_slogan {
+
+  .keyframes(rock;{
+    0%{transform: rotate(0deg)}
+    5%{transform: rotate(3deg)}
+    10%{transform: rotate(-4deg)}
+    15%{transform: rotate(3deg)}
+    20%{transform: rotate(-2deg)}
+    25%{transform: rotate(1deg)}
+    30%{transform: rotate(-1deg)}
+    70%{transform: rotate(0deg)}
+    100%{transform: rotate(0deg)}
+  });
+
+  .animation(rock 2s infinite 2s);
+}
+
+
+.h5_component_name_caption{
+  background-image: url(../images/page_caption_bg.png);
+  width: 283px;
+  height: 160px;
+  text-align: center;
+  line-height: 140px;
+  font-size: 20px;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+}
+.h5_component_name_back{
+  top: 30px;
+  .keyframes(back;{
+    50%{top: 20px}
+  });
+  .animation(back 2s infinite 2s);
+}
+
 
