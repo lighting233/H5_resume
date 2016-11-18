@@ -79,6 +79,9 @@
                 case 'point':
                     component = new H5ComponentPoint(name,cfg);
                     break;
+                /*case 'clock':
+                    component = new H5ComponentClock(name,cfg);
+                    break;*/
 
                 default:
             }

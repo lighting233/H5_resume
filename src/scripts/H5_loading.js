@@ -1,6 +1,6 @@
 var H5_loading =function (images, firstPage) {
 
-    var id = this.id;
+   /* var id = this.id;
     if (this._images === undefined ){
         this._images = (images || []).length;
         this._loaded = 0;
@@ -12,20 +12,21 @@ var H5_loading =function (images, firstPage) {
             var img = new Image;
             img.onload = function () {
                 window[id].loader();
-            }
+            };
             img.src = item;
         }
         $('#rate').text('0%');
+
         return this;
     }else {
         this._loaded++;
         $('#rate').text(((this._loaded/this._images *100)>>0)+'%');
         if (this._loaded<this._images){
+
             return this;
         }
     }
-    window[id] = null;
-
+    window[id] = null;*/
 
     this.el.fullpage({
 
