@@ -2,20 +2,6 @@
  * Created by light on 2016/11/14.
  */
 
-    /*(function (window ,document) {
-
-     //调用fullpage.js
-     $("#h5").fullpage({
-     navigation:!0,
-     navigationPosition:"right",
-     onLeave: function (index,nextIndex,direction) {
-     },
-     afterLoad: function (anchorLink,index) {
-     }
-     });
-
-     })(window,document);*/
-
     /* 内容管理对象 */
 
     var H5 = function () {

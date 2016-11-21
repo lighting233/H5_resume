@@ -11,3 +11,23 @@
   font-size: 12px;
   transition: all 1s;
 }
+@media screen and (min-width: 450px) {
+  .h5_component_radar {
+    left: 35% !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .h5_component_radar {
+    left: 16% !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .h5_component_radar {
+    left: 25% !important;
+  }
+}
+@media screen and (max-width: 350px) {
+  .h5_component_radar {
+    left: 20% !important;
+  }
+}

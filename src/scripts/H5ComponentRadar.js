@@ -5,8 +5,8 @@ var H5ComponentRadar = function (name, cfg) {
     var component = new H5ComponentBase(name,cfg);
 
     // 绘制网格线-背景层
-    var w = cfg.width;
-    var h = cfg.height;
+    var w = cfg.width || component.width()*2;
+    var h = cfg.height || component.height()*2;
 
     //加入画布，用来做网格线背景
     var cns = document.createElement('canvas');

@@ -7,8 +7,23 @@ var H5ComponentBase = function (name, cfg) {
     var component = $('<div class="h5_component ' + cls + ' h5_component_name_' + name+'" id="' + id + '">');
 
     cfg.text && component.text(cfg.text);
-    cfg.width && component.width(cfg.width/2);
-    cfg.height && component.height(cfg.height/2);
+    if(cfg.width && cfg.height){
+        component.width(cfg.width/2);
+        component.height(cfg.height/2);
+    }else {
+        if(document.body.clientWidth > 750){
+            component.width(400);
+            component.height(400);
+        }else if(document.body.clientWidth >375 && document.body.clientWidth< 750){
+            component.width(300);
+            component.height(300);
+        }else {
+            component.width(200);
+            component.height(200);
+        }
+    }
+    /*cfg.width && component.width(cfg.width/2);
+    cfg.height && component.height(cfg.height/2);*/
     cfg.addclass && component.addClass(cfg.addclass);
 
     cfg.css && component.css(cfg.css);
