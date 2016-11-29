@@ -5,8 +5,8 @@ var H5ComponentPolyline = function (name, cfg) {
     var component = new H5ComponentBase(name,cfg);
 
     // 绘制网格线-背景层
-    var w = cfg.width || component.width()*2;
-    var h = cfg.height || component.height()*2;
+    var w =component.width()*2;
+    var h =component.height()*2;
 
     //加入画布，用来做网格线背景
     var cns = document.createElement('canvas');
@@ -43,7 +43,7 @@ var H5ComponentPolyline = function (name, cfg) {
             var text = $('<div class="text">');
             text.text(cfg.data[i][0]);
 
-            text.css('width',text_w/2).css('left',x/2+text_w/4);
+            text.css('width',text_w/2+11).css('left',x/2+text_w/4);
             component.append(text);
 
         }

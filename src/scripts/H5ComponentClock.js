@@ -160,7 +160,7 @@
             MARGIN_LEFT = Math.round(11 * WINDOW_WIDTH / 36);
             RADIUS = (Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1) * 0.8;
             MARGIN_TOP = Math.round(3 * WINDOW_HEIGHT / 5);
-        } else if (WINDOW_WIDTH < 750 && WINDOW_WIDTH > 370) {
+        } else if (WINDOW_WIDTH < 750 && WINDOW_WIDTH > 330) {
             MARGIN_LEFT = Math.round(WINDOW_WIDTH / 4);
             RADIUS = Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1;
             MARGIN_TOP = Math.round(4 * WINDOW_HEIGHT / 5);

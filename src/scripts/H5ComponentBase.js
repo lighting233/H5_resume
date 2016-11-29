@@ -6,8 +6,8 @@ var H5ComponentBase = function (name, cfg) {
     var cls = ' h5_component_' + cfg.type;
     var component = $('<div class="h5_component ' + cls + ' h5_component_name_' + name+'" id="' + id + '">');
 
-    cfg.text && component.text(cfg.text);
-    if(cfg.width && cfg.height){
+    cfg.text && component.html(cfg.text);
+    /*if(cfg.width && cfg.height){
         component.width(cfg.width/2);
         component.height(cfg.height/2);
     }else {
@@ -21,23 +21,45 @@ var H5ComponentBase = function (name, cfg) {
             component.width(200);
             component.height(200);
         }
+    }*/
+
+    if(document.body.clientWidth > 750){
+        component.width((cfg.width/2)*1.8);
+        component.height((cfg.height/2)*1.8);
+    } else if(document.body.clientWidth >450 && document.body.clientWidth< 750){
+        component.width((cfg.width/2)*1.5);
+        component.height((cfg.height/2)*1.5);
+    }else if(document.body.clientWidth >400 && document.body.clientWidth< 450){
+        component.width((cfg.width/2)*1.3);
+        component.height((cfg.height/2)*1.3);
+    }else if(document.body.clientWidth >350 && document.body.clientWidth< 400){
+        component.width((cfg.width/2)*1.2);
+        component.height((cfg.height/2)*1.2);
+    }else {
+        component.width(cfg.width/2);
+        component.height(cfg.height/2);
     }
+
     /*cfg.width && component.width(cfg.width/2);
     cfg.height && component.height(cfg.height/2);*/
-    cfg.addclass && component.addClass(cfg.addclass);
+    cfg.addClass && component.addClass(cfg.addClass);
 
     cfg.css && component.css(cfg.css);
     cfg.bg && component.css('backgroundImage','url('+cfg.bg+')');
 
     if (cfg.center === true){
         component.css({
-            marginLeft:(cfg.width/4* -1)+'px',
+            marginLeft:(component.width()/2* -1)+'px',
             left:'50%'
         })
     }
 
     if(typeof cfg.onclick === 'function'){
         component.on('click',cfg.onclick)
+    }
+
+    if(typeof cfg.hoverIn === 'function'){
+        component.hover(cfg.hoverIn,cfg.hoverOut)
     }
 
     component.on('onLoad', function () {

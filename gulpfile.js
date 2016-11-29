@@ -24,10 +24,23 @@ var autoprefixer = require('gulp-autoprefixer');
 gulp.task('less',function () {
 	gulp.src(['src/styles/*.less','!src/styles/_*.less'])
 		.pipe(less())
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions']
-		}))
+		/*.pipe(autoprefixer({
+			browsers: ['last 2 versions','Android >= 4.0'],
+			remove:false
+		}))*/
 		//.pipe(cssnano())
+		.pipe(gulp.dest('src/css'))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
+});
+
+gulp.task('autoprefixer',function () {
+	gulp.src(['src/css/*.css','!src/css/_*.css'])
+		.pipe(autoprefixer({
+		 browsers: ['last 2 versions','Android >= 4.0'],
+		 remove:false
+		 }))
 		.pipe(gulp.dest('dist/styles'))
 		.pipe(browserSync.reload({
 			stream: true

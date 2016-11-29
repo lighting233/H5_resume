@@ -1,0 +1,7 @@
+.h5_component_name_back{
+  top: 30px;
+  -webkit-animation: back 2s infinite 2s;
+}
+@-webkit-keyframes back {
+  50%{top: 20px}
+}

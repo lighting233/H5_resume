@@ -2,7 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-size: 12px;
+  font-family: "Microsoft YaHei";
 }
+body a {
+  text-decoration: none;
+  color: #FFF200;
+}
+/*自定义变量*/
 /* H5对象的全局样式 */
 .h5 {
   height: 100%;
@@ -18,9 +24,11 @@ body {
 .h5_page {
   background-image: url(../images/page_bg.png);
 }
-.h5_page_face {
+.h5_page_face,
+.h5_page_clock {
   background-image: url(../images/face_bg.png);
 }
+/*组件样式*/
 .h5_component_name_slogan {
   animation: rock 2s infinite 2s;
 }
@@ -55,37 +63,11 @@ body {
 }
 .h5_component_name_caption {
   background-image: url(../images/page_caption_bg.png);
-  /*width: 283px;
-  height: 160px;*/
   text-align: center;
   font-size: 20px;
   color: #ffffff;
   top: 0;
   left: 0;
-}
-@media screen and (min-width: 450px) {
-  .h5_component_name_caption {
-    line-height: 200px;
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .h5_component_name_caption {
-    line-height: 150px;
-    font-size: 25px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .h5_component_name_caption {
-    line-height: 100px;
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 350px) {
-  .h5_component_name_caption {
-    line-height: 100px;
-    font-size: 20px;
-  }
 }
 .h5_component_name_back {
   top: 30px;
@@ -94,5 +76,95 @@ body {
 @keyframes back {
   50% {
     top: 20px;
+  }
+}
+/*响应式布局*/
+@media screen and (min-width: 450px) {
+  .h5_component_name_caption {
+    line-height: 210px;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .h5_component_name_caption {
+    line-height: 250px;
+    font-size: 40px;
+  }
+  .h5_component_name_buy {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  .h5_component_name_caption {
+    line-height: 180px;
+    font-size: 30px;
+  }
+  .h5_component_name_resume {
+    right: 12% !important;
+  }
+  .h5_component_name_blog {
+    left: 12% !important;
+  }
+  .h5_component_name_buy {
+    font-size: 30px!important;
+    width: 160px!important;
+    height: 100px!important;
+    top: 50% !important;
+    left: 30% !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .h5_component_name_caption {
+    line-height: 170px;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .h5_component_name_caption {
+    line-height: 140px;
+    font-size: 20px;
+  }
+}
+/*animate.css类样式设置*/
+.bounce {
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 4;
+}
+.wobble,
+.jello {
+  animation-duration: 1s;
+  animation-delay: .5s;
+  animation-iteration-count: 1;
+}
+.tada {
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 10;
+}
+.flipInY {
+  animation-duration: 2.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1000;
+}
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
   }
 }
