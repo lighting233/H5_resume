@@ -7,21 +7,7 @@ var H5ComponentBase = function (name, cfg) {
     var component = $('<div class="h5_component ' + cls + ' h5_component_name_' + name+'" id="' + id + '">');
 
     cfg.text && component.html(cfg.text);
-    /*if(cfg.width && cfg.height){
-        component.width(cfg.width/2);
-        component.height(cfg.height/2);
-    }else {
-        if(document.body.clientWidth > 750){
-            component.width(400);
-            component.height(400);
-        }else if(document.body.clientWidth >375 && document.body.clientWidth< 750){
-            component.width(300);
-            component.height(300);
-        }else {
-            component.width(200);
-            component.height(200);
-        }
-    }*/
+
 
     if(document.body.clientWidth > 750){
         component.width((cfg.width/2)*1.8);
@@ -39,10 +25,6 @@ var H5ComponentBase = function (name, cfg) {
         component.width(cfg.width/2);
         component.height(cfg.height/2);
     }
-
-    /*cfg.width && component.width(cfg.width/2);
-    cfg.height && component.height(cfg.height/2);*/
-
 
     cfg.css && component.css(cfg.css);
     cfg.bg && component.css('backgroundImage','url('+cfg.bg+')');

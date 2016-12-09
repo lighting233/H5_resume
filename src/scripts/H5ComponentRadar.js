@@ -19,13 +19,6 @@ var H5ComponentRadar = function (name, cfg) {
     var r = w/2;
     var step = cfg.data.length;
 
-    // 计算一个多边形顶点坐标
-    // 已知：圆心坐标（a，b）、半径 r ; 角度 deg。
-    // rad = (2*Math.PI/360)*(360/step)*i;
-    // x = a+Math.sin(rad)*r;
-    // y = b+Math.cos(rad)*r;
-
-
     // 绘制网格背景（分面绘制，分为10份）
     var isBlue = false;
     for (var s =10;s>0;s--){
@@ -56,8 +49,7 @@ var H5ComponentRadar = function (name, cfg) {
         var text = $('<div class="text">');
         text.text(cfg.data[i][0]);
 
-        //text.css('left',x/2);
-        //text.css('top',y/2);
+
         text.css('transition','all .5s '+i*0.1+'s');
         if (x>w/2){
             text.css('left',x/2+5);

@@ -235,7 +235,7 @@
         }
 
         updateBalls();
-        //console.log(balls.length);
+
     }
 
     function updateBalls() {
@@ -282,9 +282,6 @@
         var hours = parseInt(curShowTimeSeconds / 3600);
         var minutes = parseInt((curShowTimeSeconds - hours * 3600) / 60);
         var seconds = curShowTimeSeconds % 60;
-        /*renderDigit(MARGIN_LEFT,MARGIN_TOP,parseInt(hours/10),cxt);
-         renderDigit(MARGIN_LEFT + 15*(RADIUS + 1),MARGIN_TOP,parseInt(hours%10),cxt);
-         renderDigit( MARGIN_LEFT + 30*(RADIUS + 1) , MARGIN_TOP , 10 , cxt );*/
         renderDigit(MARGIN_LEFT, MARGIN_TOP, parseInt(minutes / 10), cxt);
         renderDigit(MARGIN_LEFT + 15 * (RADIUS + 1), MARGIN_TOP, parseInt(minutes % 10), cxt);
         renderDigit(MARGIN_LEFT + 30 * (RADIUS + 1), MARGIN_TOP, 10, cxt);

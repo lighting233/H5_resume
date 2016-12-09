@@ -30,6 +30,7 @@ var H5_loading =function (images, firstPage) {
 
     $("body").append('<script src="scripts/H5ComponentClock.js"></script>');
 
+
     this.el.fullpage({
 
         onLeave: function (index,nextIndex,direction) {
