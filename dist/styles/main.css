@@ -30,35 +30,83 @@ body a {
 }
 /*组件样式*/
 .h5_component_name_slogan {
+  -webkit-animation: rock 2s infinite 2s;
   animation: rock 2s infinite 2s;
+}
+@-webkit-keyframes rock {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  5% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  10% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  15% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  20% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  25% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  30% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 @keyframes rock {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   5% {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   10% {
-    transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
   15% {
-    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   20% {
-    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   25% {
-    transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
   }
   30% {
-    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
   }
   70% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 .h5_component_name_caption {
@@ -71,12 +119,24 @@ body a {
 }
 .h5_component_name_back {
   top: 30px;
-  animation: back 2s infinite 2s;
+  z-index: 100;
+  -webkit-animation: back 2s infinite 2s;
+          animation: back 2s infinite 2s;
+}
+@-webkit-keyframes back {
+  50% {
+    top: 20px;
+  }
 }
 @keyframes back {
   50% {
     top: 20px;
   }
+}
+.h5_component_name_github a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 /*响应式布局*/
 @media screen and (min-width: 450px) {
@@ -90,14 +150,36 @@ body a {
     line-height: 250px;
     font-size: 40px;
   }
-  .h5_component_name_buy {
-    display: block;
+}
+@media screen and (min-width: 1024px) {
+  .h5_component_name_myPhoto {
+    top: 20% !important;
+  }
+  .h5_component_name_name {
+    top: 50% !important;
+  }
+  .h5_component_name_position {
+    top: 60% !important;
   }
 }
 @media screen and (max-width: 450px) {
   .h5_component_name_caption {
     line-height: 180px;
     font-size: 30px;
+  }
+  .h5_component_name_description {
+    font-size: 18px !important;
+    color: #3c3c3c !important;
+    top: 180px !important;
+    background: none !important;
+    background-color: #99C0FF !important;
+    height: 300px !important;
+    border-radius: 20px;
+  }
+  .h5_component_name_description02 {
+    font-size: 18px !important;
+    color: #3c3c3c !important;
+    height: 290px !important;
   }
   .h5_component_name_resume {
     right: 12% !important;
@@ -106,11 +188,13 @@ body a {
     left: 12% !important;
   }
   .h5_component_name_buy {
-    font-size: 30px!important;
-    width: 160px!important;
-    height: 100px!important;
-    top: 50% !important;
-    left: 30% !important;
+    display: none;
+  }
+  .h5_component_name_buy02 {
+    width: 130px;
+    height: 80px;
+    left: 36% !important;
+    display: block !important;
   }
 }
 @media screen and (max-width: 400px) {
@@ -118,53 +202,135 @@ body a {
     line-height: 170px;
     font-size: 25px;
   }
+  .h5_component_name_description {
+    font-size: 16px !important;
+    height: 260px !important;
+  }
 }
 @media screen and (max-width: 350px) {
   .h5_component_name_caption {
     line-height: 140px;
     font-size: 20px;
   }
+  .h5_component_name_buy02 {
+    left: 32% !important;
+  }
+  .h5_component_name_description {
+    font-size: 12px !important;
+    top: 160px !important;
+    height: 220px !important;
+  }
+  .h5_component_name_description02 {
+    font-size: 12px !important;
+    height: 230px !important;
+  }
+}
+@media screen and (max-height: 550px) {
+  .h5_component_name_people {
+    display: none !important;
+  }
+  .h5_component_name_description02 {
+    bottom: 20% !important;
+  }
+  .h5_component_name_des_bg {
+    bottom: 0 !important;
+  }
 }
 /*animate.css类样式设置*/
+.rubberBand {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
 .bounce {
-  animation-duration: 4s;
-  animation-delay: 2s;
-  animation-iteration-count: 4;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1000;
+          animation-iteration-count: 1000;
 }
 .wobble,
 .jello {
-  animation-duration: 1s;
-  animation-delay: .5s;
-  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
 }
 .tada {
-  animation-duration: 1s;
-  animation-delay: 0s;
-  animation-iteration-count: 10;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
 }
 .flipInY {
-  animation-duration: 2.5s;
-  animation-delay: 0s;
-  animation-iteration-count: 1000;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1000;
+          animation-iteration-count: 1000;
 }
-@keyframes flipInY {
+@-webkit-keyframes flipInY {
   from {
-    transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
-    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
-    animation-timing-function: ease-in;
+    -webkit-transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
+            transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
   }
   60% {
-    transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
+    -webkit-transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
+            transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
     opacity: 1;
   }
   80% {
-    transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
   }
   to {
-    transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
+  }
+}
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, 90deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
+            transform: perspective(400px) rotate3d(0, 0, 1, 45deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
+            transform: perspective(400px) rotate3d(0, 0, 1, -20deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, 30deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
+            transform: perspective(400px) rotate3d(1, 0, 1, -50deg);
   }
 }

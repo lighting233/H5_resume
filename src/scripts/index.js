@@ -4,6 +4,8 @@
 
     /* 内容管理对象 */
 
+    var jdata = [];
+
     var H5 = function () {
 
         this.id = ('h5_'+Math.random()).replace('.','_');
@@ -14,6 +16,7 @@
         //新增一个页
         this.addPage = function (name,text) {
 
+            jdata.push({isPage:true,name:name,text:text});
             var  page = $('<div class="h5_page section">');
             if(name != undefined){
                 page.addClass('h5_page_'+name);
@@ -33,6 +36,7 @@
         //新增一个组件
         this.addComponent = function (name,cfg) {
 
+            jdata.push({isPage:false,name:name,cfg:cfg});
             var cfg = cfg || {};
             cfg = $.extend({type:'base'
             },cfg);

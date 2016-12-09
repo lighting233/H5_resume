@@ -42,7 +42,7 @@ var H5ComponentBase = function (name, cfg) {
 
     /*cfg.width && component.width(cfg.width/2);
     cfg.height && component.height(cfg.height/2);*/
-    cfg.addClass && component.addClass(cfg.addClass);
+
 
     cfg.css && component.css(cfg.css);
     cfg.bg && component.css('backgroundImage','url('+cfg.bg+')');
@@ -66,6 +66,7 @@ var H5ComponentBase = function (name, cfg) {
         setTimeout(function () {
             component.addClass(cls+'_load').removeClass(cls+'_leave');
             cfg.animateIn && component.animate(cfg.animateIn);
+            cfg.addClass && component.addClass(cfg.addClass);
         },cfg.delay || 0);
 
         //防止事件冒泡

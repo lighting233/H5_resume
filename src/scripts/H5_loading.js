@@ -1,6 +1,6 @@
 var H5_loading =function (images, firstPage) {
 
-   /* var id = this.id;
+    var id = this.id;
     if (this._images === undefined ){
         this._images = (images || []).length;
         this._loaded = 0;
@@ -26,7 +26,9 @@ var H5_loading =function (images, firstPage) {
             return this;
         }
     }
-    window[id] = null;*/
+    window[id] = null;
+
+    $("body").append('<script src="scripts/H5ComponentClock.js"></script>');
 
     this.el.fullpage({
 

@@ -18,34 +18,25 @@ gulp.task('html',function () {
 
 //less 编译 自动添加前缀 压缩
 var less = require('gulp-less');
-var autoprefixer = require('gulp-autoprefixer');
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+var autoprefix = new LessPluginAutoPrefix({
+	browsers: ["last 5 versions"],
+	cascade: true
+});
 //var cssnano = require('gulp-cssnano');
 
 gulp.task('less',function () {
 	gulp.src(['src/styles/*.less','!src/styles/_*.less'])
-		.pipe(less())
-		/*.pipe(autoprefixer({
-			browsers: ['last 2 versions','Android >= 4.0'],
-			remove:false
-		}))*/
+		.pipe(less({
+			plugins: [autoprefix]
+		}))
 		//.pipe(cssnano())
-		.pipe(gulp.dest('src/css'))
-		.pipe(browserSync.reload({
-			stream: true
-		}));
-});
-
-gulp.task('autoprefixer',function () {
-	gulp.src(['src/css/*.css','!src/css/_*.css'])
-		.pipe(autoprefixer({
-		 browsers: ['last 2 versions','Android >= 4.0'],
-		 remove:false
-		 }))
 		.pipe(gulp.dest('dist/styles'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
+
 
 //js 合并 混淆
 //var concat = require('gulp-concat');

@@ -6,7 +6,7 @@
     var MARGIN_LEFT = 30;
 
     var endTime = new Date();
-    endTime.setTime(endTime.getTime() + 180 * 1000);
+    endTime.setTime(endTime.getTime() + 300 * 1000);
     var curShowTimeSeconds = 0;
     var balls = [];
     const colors = ["#33B5E5", "#0099CC", "#AA66CC", "#9933CC", "#99CC00", "#669900", "#FFBB33", "#FF8800", "#FF4444", "#CC0000"];
