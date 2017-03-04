@@ -53,7 +53,7 @@
 
             var h5 = new H5();
 
-/*            h5
+            h5
                     .addPage('face')
                     .addComponent('myPhoto',{
                         center:true,
@@ -441,16 +441,20 @@
                     })
                     .addComponent('clock',{
                      type:'clock'
-                     })*/
+                     })
 
-                    $.getJSON('data.json',function (json) {
+
+
+
+                    /*$.getJSON('data.json',function (json) {
                         $.each(json,function (i, item) {
                             if(item.isPage){
                                 h5.addPage(item.name,item.text);
                             }else {
                                 h5.addComponent(item.name,item.cfg);
+                                console.log(item.cfg);
                             }
-                        });
+                        });*/
 
                         h5.loader(['images/tail_back.png','images/tail_slogan.png','images/p1_people.png',
                             'images/description_bg.gif','images/face_img_right.png','images/face_img_left.png',
@@ -460,7 +464,7 @@
 
 
 
-        });
+
 </script>
 </body>
 </html>
